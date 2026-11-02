@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fortunate809.github.io/WEDE5020-B3-Concept/sitemap.xml
