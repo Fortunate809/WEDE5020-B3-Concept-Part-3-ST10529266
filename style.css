@@ -1,0 +1,517 @@
+/* B3 Concept Website
+   WEDE5020 Part 2
+   Questions 2.1-3.3
+   External stylesheet and base styles
+*/
+
+/* Base reset */
+* {
+    box-sizing: border-box;
+}
+
+/* Base page style */
+html {
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f7f5f2;
+}
+
+/* Base heading styles */
+h1,
+h2,
+h3 {
+    margin-top: 0;
+    line-height: 1.2;
+}
+
+/* Base paragraph spacing */
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+/* Base link style */
+a {
+    color: #6b4f3a;
+}
+
+a:hover {
+    color: #3f2d20;
+}
+
+/* Responsive media defaults */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Question 2.3: Typography styles */
+
+/* Main site heading */
+h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+}
+
+/* Section headings */
+h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+}
+
+/* Smaller headings */
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+}
+
+/* Header introduction text */
+header > p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+}
+
+/* General body text */
+main p,
+main li,
+main address,
+main label {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Form legend */
+legend {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+/* Figure captions */
+figcaption {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+/* Question 2.4: Desktop layout using Flexbox and CSS Grid */
+
+/* Main page structure */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 5%;
+    background-color: #e9e1d8;
+    text-align: center;
+}
+
+header nav {
+    width: 100%;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header nav a {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Main content container */
+main {
+    width: min(90%, 1200px);
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+/* General sections */
+main > section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: #ffffff;
+}
+
+/* Home-page content sections */
+main > section figure {
+    margin: 0 0 1.5rem;
+}
+
+main > section figure img {
+    display: block;
+    width: 100%;
+    max-width: 680px;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Use CSS Grid for service and content groupings */
+main > section:has(article) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+main > section:has(article) > h2,
+main > section:has(article) > p,
+main > section:has(article) > figure {
+    grid-column: 1 / -1;
+}
+
+main article {
+    padding: 1.5rem;
+}
+
+/* Lists use flexible layout where appropriate */
+main > section > ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+    padding-left: 1.5rem;
+}
+
+/* Forms */
+form {
+    width: 100%;
+}
+
+fieldset {
+    display: grid;
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+fieldset p {
+    margin: 0;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font: inherit;
+}
+
+button {
+    padding: 0.75rem 1.25rem;
+    font: inherit;
+    cursor: pointer;
+}
+
+/* Contact page service areas */
+main > section[id] {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+main > section[id] h2,
+main > section[id] p {
+    margin-bottom: 0;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 5%;
+    background-color: #e9e1d8;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Question 2.5: Visual styling and pseudo-classes */
+
+/* Headings and brand presentation */
+header h1 {
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+header > p {
+    max-width: 700px;
+    margin-bottom: 0;
+}
+
+/* Navigation links */
+header nav a {
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+header nav a:hover,
+header nav a:focus {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+}
+
+header nav a:focus-visible,
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #6b4f3a;
+    outline-offset: 3px;
+}
+
+/* Content cards */
+main > section,
+main article,
+fieldset {
+    border: 1px solid #ded7cf;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+main > section h2 {
+    color: #4b382b;
+}
+
+/* Images */
+main img {
+    border-radius: 0.5rem;
+}
+
+/* Links */
+main a {
+    font-weight: 600;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+/* Forms */
+input,
+select,
+textarea {
+    border: 1px solid #bdb5ad;
+    border-radius: 0.25rem;
+    background-color: #ffffff;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+    border-color: #6b4f3a;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #6b4f3a;
+    box-shadow: 0 0 0 3px rgba(107, 79, 58, 0.15);
+}
+
+/* Buttons */
+button {
+    border: 1px solid #6b4f3a;
+    border-radius: 0.25rem;
+    background-color: #6b4f3a;
+    color: #ffffff;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #3f2d20;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Service cards */
+main article:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+/* Alternating service list appearance */
+main article:nth-of-type(even) {
+    background-color: #faf8f5;
+}
+
+/* Footer links */
+footer a {
+    font-weight: 700;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Text selection */
+::selection {
+    background-color: #ded7cf;
+}
+
+
+/* Question 3.1: Responsive breakpoints and media queries */
+
+/* Tablet breakpoint */
+@media (max-width: 900px) {
+    header {
+        padding: 1.75rem 4%;
+    }
+
+    header nav ul {
+        gap: 0.9em;
+    }
+
+    main {
+        width: 92%;
+        padding: 2.25rem 0;
+    }
+
+    main > section:has(article) {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 600px) {
+    header {
+        padding: 1.25rem 5%;
+        gap: 0.75rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header > p {
+        font-size: 1rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0.35em;
+    }
+
+    header nav a {
+        width: 100%;
+        padding: 0.55rem 0.75rem;
+    }
+
+    main {
+        width: 94%;
+        padding: 1.5rem 0;
+    }
+
+    main > section {
+        margin-bottom: 1.5rem;
+        padding: 1.25rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    main > section > ul {
+        display: block;
+        padding-left: 1.25rem;
+    }
+
+    main > section > ul li {
+        margin-bottom: 0.5em;
+    }
+
+    main article {
+        padding: 1rem;
+    }
+
+    fieldset {
+        padding: 1rem;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    footer {
+        padding: 1.25rem 5%;
+    }
+}
+
+/* Question 3.2: Relative units are used throughout the stylesheet.
+   rem controls scalable typography and spacing, % controls fluid widths,
+   and em controls spacing that scales with the element's font size. */
+
+
+/* Part 3: JavaScript feature presentation */
+[hidden] { display: none !important; }
+.service-tools { display: grid; grid-template-columns: 1fr; gap: 0.5rem; max-width: 42rem; margin: 1rem 0 2rem; }
+.service-tools label { font-weight: 700; }
+.service-tools p { margin: 0.25rem 0; }
+.accordion-trigger { width: 100%; text-align: left; display: flex; justify-content: space-between; align-items: center; }
+.accordion-trigger::after { content: "+"; font-size: 1.3em; margin-left: 1rem; }
+.accordion-trigger[aria-expanded="true"]::after { content: "−"; }
+.accordion-panel { padding: 1rem 1.25rem; border: 1px solid #ded7cf; border-top: 0; background: #faf8f5; }
+.faq-item { margin: 1rem 0; }
+.faq-item h3 { margin: 0; }
+.image-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.gallery-image { padding: 0.5rem; background: #fff; color: #4b382b; border: 1px solid #ded7cf; text-align: left; }
+.gallery-image img { display: block; width: 100%; height: 12rem; object-fit: cover; margin-bottom: 0.5rem; }
+.gallery-image span { display: block; font-weight: 700; }
+.lightbox { width: min(90vw, 900px); max-width: 90vw; border: 0; border-radius: 0.5rem; padding: 1rem; box-shadow: 0 1rem 3rem rgba(0,0,0,.35); }
+.lightbox::backdrop { background: rgba(0,0,0,.78); }
+.lightbox img { display: block; max-width: 100%; max-height: 75vh; width: auto; margin: 1rem auto; }
+.lightbox-close { display: block; margin-left: auto; }
+.service-area-map { width: 100%; height: 390px; min-height: 300px; border: 1px solid #ded7cf; border-radius: .5rem; z-index: 1; }
+.reveal-ready { opacity: 0; transform: translateY(16px); transition: opacity .55s ease, transform .55s ease; }
+.reveal-ready.is-visible { opacity: 1; transform: translateY(0); }
+@media (max-width: 600px) { .image-gallery { grid-template-columns: 1fr; } .gallery-image img { height: 14rem; } .service-area-map { height: 320px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } .reveal-ready { opacity: 1; transform: none; } }
+
+
+/* Part 3 form feedback */
+.form-status { min-height: 1.5rem; font-weight: 600; }
+button:disabled { opacity: 0.65; cursor: wait; }
