@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <title>Contact B3 Concept | General Enquiries</title>
+    <meta name="description" content="Contact B3 Concept for general enquiries, feedback, partnerships and information about its South African service areas.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://fortunate809.github.io/WEDE5020-B3-Concept/contact.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact B3 Concept | General Enquiries">
+    <meta property="og:description" content="Contact B3 Concept for general enquiries, feedback, partnerships and information about its South African service areas.">
+    <meta property="og:url" content="https://fortunate809.github.io/WEDE5020-B3-Concept/contact.html">
+</head>
+<body>
+    <header>
+        <h1>B3 Concept</h1>
+        <p>Interior and graphic design solutions for residential, commercial and retail spaces.</p>
+        <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="enquiry.html">Enquiry</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Contact page separates general communication from project enquiries. -->
+        <!-- Three service areas are documented with map links. -->
+
+        <section>
+            <h2>Get in Touch</h2>
+            <p>For general communication, use the contact information below or send a message using the general contact form.</p>
+            <address>B3 Concept<br>Constantia, Cape Town<br>South Africa</address>
+            <p>Email: <a href="mailto:info@b3concept.co.za">info@b3concept.co.za</a></p>
+        </section>
+        
+        <section aria-labelledby="map-heading">
+            <h2 id="map-heading">Explore Our Service Areas</h2>
+            <p>The map shows the three broad South African service areas listed on this website. Markers represent city locations, not confirmed office addresses.</p>
+            <div id="service-area-map" class="service-area-map" role="region" aria-label="Map showing Cape Town, Johannesburg and Durban service areas"></div>
+            <p class="map-fallback"><a href="https://www.google.com/maps/search/?api=1&amp;query=South+Africa" target="_blank" rel="noopener">Open South Africa in Google Maps</a></p>
+        </section>
+
+        <section id="cape-town">
+            <h2>Cape Town</h2>
+            <p>Service area: Cape Town and surrounding areas.</p>
+            <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Constantia%2C%20Cape%20Town%2C%20South%20Africa" target="_blank" rel="noopener">View Cape Town on Google Maps</a></p>
+        </section>
+        <section id="johannesburg">
+            <h2>Johannesburg</h2>
+            <p>Service area: Johannesburg and surrounding areas.</p>
+            <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Johannesburg%2C%20South%20Africa" target="_blank" rel="noopener">View Johannesburg on Google Maps</a></p>
+        </section>
+        <section id="durban">
+            <h2>Durban</h2>
+            <p>Service area: Durban and surrounding areas.</p>
+            <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Durban%2C%20South%20Africa" target="_blank" rel="noopener">View Durban on Google Maps</a></p>
+        </section>
+        <section>
+            <h2>General Contact Form</h2>
+            <form id="general-contact-form" data-ajax-form action="https://formsubmit.co/ajax/info@b3concept.co.za" method="post">
+                <fieldset>
+                    <legend>Send a General Message</legend>
+                    <p><label for="contact-name">Full name:</label> <input type="text" id="contact-name" name="name" minlength="2" maxlength="80" autocomplete="name" required></p>
+                    <p><label for="contact-email">Email address:</label> <input type="email" id="contact-email" name="email" maxlength="120" autocomplete="email" required></p>
+                    <p><label for="contact-phone">Phone number (optional):</label> <input type="tel" id="contact-phone" name="phone" maxlength="15" pattern="[+0-9 ()-]{10,15}" autocomplete="tel"></p>
+                    <p><label for="message-type">Message type:</label>
+                        <select id="message-type" name="message-type" required>
+                            <option value="">Select a message type</option>
+                            <option value="general">General enquiry</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="existing-project">Existing project</option>
+                            <option value="partnership">Partnership</option>
+                        </select>
+                    </p>
+                    <p><label for="message">Message:</label><br><textarea id="message" name="message" rows="8" cols="50" minlength="10" maxlength="2000" required></textarea></p>
+                    <input type="hidden" name="_subject" value="New B3 Concept general contact message">
+                    <input type="hidden" name="_template" value="table">
+                    <p><button type="submit">Send Message</button></p>
+                    <p class="form-status" role="status" aria-live="polite"></p>
+                </fieldset>
+            </form>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2026 B3 Concept website project.</p>
+        <p><a href="contact.html">Contact B3 Concept</a></p>
+    </footer>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
