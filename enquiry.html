@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Project Enquiry | B3 Concept Design Services</title>
+    <meta name="description" content="Submit a project enquiry to B3 Concept. Share your service needs, project location, budget and design requirements.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://fortunate809.github.io/WEDE5020-B3-Concept/enquiry.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Project Enquiry | B3 Concept Design Services">
+    <meta property="og:description" content="Submit a project enquiry to B3 Concept. Share your service needs, project location, budget and design requirements.">
+    <meta property="og:url" content="https://fortunate809.github.io/WEDE5020-B3-Concept/enquiry.html">
+</head>
+<body>
+    <header>
+        <h1>B3 Concept</h1>
+        <p>Interior and graphic design solutions for residential, commercial and retail spaces.</p>
+        <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="enquiry.html">Enquiry</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Project enquiry form with HTML5 validation attributes. -->
+        <!-- Labels, inputs, select controls and textarea are associated with fields. -->
+
+        <section>
+            <h2>Project Enquiry</h2>
+            <p>Use this form to provide information about a potential project. It is intended for prospective clients who want to enquire about a service rather than send a general message.</p>
+            <form id="project-enquiry-form" data-ajax-form action="https://formsubmit.co/ajax/info@b3concept.co.za" method="post">
+                <fieldset>
+                    <legend>Project Details</legend>
+                    <p><label for="full-name">Full name:</label> <input type="text" id="full-name" name="full-name" minlength="2" maxlength="80" autocomplete="name" required></p>
+                    <p><label for="email">Email address:</label> <input type="email" id="email" name="email" maxlength="120" autocomplete="email" required></p>
+                    <p><label for="phone">Phone number:</label> <input type="tel" id="phone" name="phone" minlength="10" maxlength="15" pattern="[+0-9 ()-]{10,15}" autocomplete="tel" required></p>
+                    <p><label for="service">Service required:</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service</option>
+                            <option value="interior-design">Interior design</option>
+                            <option value="space-planning">Space planning and staging</option>
+                            <option value="furniture">Custom joinery and furniture</option>
+                            <option value="project-management">Project management</option>
+                            <option value="3d-rendering">3D rendering</option>
+                            <option value="corporate-identity">Corporate identity</option>
+                            <option value="website-design">Website design</option>
+                            <option value="property-development">Property development</option>
+                        </select>
+                    </p>
+                    <p><label for="location">Project location:</label>
+                        <select id="location" name="location" required>
+                            <option value="">Select a location</option>
+                            <option value="cape-town">Cape Town</option>
+                            <option value="johannesburg">Johannesburg</option>
+                            <option value="durban">Durban</option>
+                            <option value="other">Other South African location</option>
+                        </select>
+                    </p>
+                    <p><label for="budget">Estimated budget:</label>
+                        <select id="budget" name="budget" required>
+                            <option value="">Select a budget range</option>
+                            <option value="under-50000">Under R50,000</option>
+                            <option value="50000-100000">R50,000 - R100,000</option>
+                            <option value="100000-250000">R100,000 - R250,000</option>
+                            <option value="250000-plus">R250,000 or more</option>
+                            <option value="undecided">Not yet decided</option>
+                        </select>
+                    </p>
+                    <p><label for="preferred-date">Preferred start date:</label> <input type="date" id="preferred-date" name="preferred-date"></p>
+                    <p><label for="project-details">Project requirements:</label><br>
+                        <textarea id="project-details" name="project-details" rows="8" cols="50" minlength="20" maxlength="1500" required placeholder="Describe your project, space, goals and requirements."></textarea>
+                    </p>
+                    <input type="hidden" name="_subject" value="New B3 Concept project enquiry">
+                    <input type="hidden" name="_template" value="table">
+                    <p><button type="submit">Submit Project Enquiry</button> <button type="reset">Clear Form</button></p>
+                    <p class="form-status" role="status" aria-live="polite"></p>
+                </fieldset>
+            </form>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2026 B3 Concept website project.</p>
+        <p><a href="contact.html">Contact B3 Concept</a></p>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
